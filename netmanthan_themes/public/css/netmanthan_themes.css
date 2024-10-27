@@ -4,6 +4,8 @@
 /* Base Font */
 body, .chart-container {
   font-family: "Cairo", sans-serif !important;
+  color: #000;
+  font-weight: bold;
 }
 
 /* Scrollbar Styling */
@@ -27,7 +29,7 @@ body, .chart-container {
 :root {
   --primary-bg: #dcdcdc;
   --secondary-bg: #178394;
-  --accent-color: #b4f5ff;
+  --accent-color: #ffffff;
   --sidebar-bg: #00b7eb;
   --sidebar-border: #dcdcdc;
   --text-muted: #888;
@@ -50,8 +52,9 @@ body, .chart-container {
   padding-right: 30px;
   padding-top: 15px;
   background-color: var(--sidebar-bg) !important;
-  color: var(--text-muted);
-  border-right: 1px solid var(--sidebar-border); /* Border for sidebar */
+  color: var(--black-color);
+  border-right: 1px solid var(--sidebar-border);
+  font-weight: bold;
 }
 .layout-side-section.hide-sidebar {
   display: none;
@@ -67,14 +70,14 @@ body, .chart-container {
   font-weight: 500;
   display: flex;
   align-items: center;
-  color: var(--text-muted);
+  color: var(--black-color);
   letter-spacing: 0.04rem;
   font-size: var(--text-sm);
 }
 .layout-side-section .sidebar-label .icon {
   margin: 0;
   margin-right: var(--margin-xs);
-  --icon-stroke: var(--text-muted);
+  --icon-stroke: var(--black-color);
 }
 .layout-side-section .form-sidebar .modified-by,
 .layout-side-section .form-sidebar .created-by,
