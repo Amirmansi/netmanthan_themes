@@ -29,11 +29,11 @@ body, .chart-container {
 
 /* Color Variables */
 :root {
-  --primary-bg: #dcdcdc;
+  --primary-bg: #baecb3;
   --secondary-bg: #178394;
   --accent-color: #ffffff;
   --sidebar-bg: #00b7eb;
-  --sidebar-border: #dcdcdc;
+  --sidebar-border: #ebe6e6;
   --text-muted: #888;
   --white-color: #ffffff;
   --black-color: #000000;
