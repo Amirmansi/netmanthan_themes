@@ -249,7 +249,7 @@ input {
 .datatable .dt-header .dt-cell--header .dt-cell__content {
     font-weight: bold; /* Extra bold for headers */
     font-size: calc(var(--dt-font-size) + 2px); /* Slightly larger font for visibility */
-    background-color: #eaeaea; /* Soft background for header */
+    background-color: #17a2b8; /* Soft background for header */
     border: 2px solid #000; /* Bold black border for emphasis */
     text-align: center; /* Center-align header text */
     padding: var(--dt-spacer-2); /* Consistent padding */
@@ -270,12 +270,12 @@ input {
 /* Table row styling */
 .datatable .dt-row {
     background-color: #fdfdfd; /* Light background for rows */
-    border: 1px solid #ddd; /* Light border between rows */
+    border: 1px solid #dbecfb; /* Light border between rows */
 }
 
 /* Alternate row shading for better readability */
 .datatable .dt-row:nth-child(even) {
-    background-color: #f9f9f9; /* Slightly darker background for alternate rows */
+    background-color: #ffffff; /* Slightly darker background for alternate rows */
 }
 
 /* Global table adjustments */
@@ -509,8 +509,8 @@ input {
   transition: background-color var(--transition-speed);
 }
 .form-control {
-  background-color: #e8eff5 !important;
-  border: 2px solid #17a2b87a;
+  background-color: #f2f2f2 !important;
+  border: 2px solid #d2e7fa;
   transition: background-color var(--transition-speed);
 }
 .form-control:focus {
@@ -553,7 +553,7 @@ input {
 .datatable .dt-header .dt-cell--header .dt-cell__content {
     font-weight: bold;
     font-size: calc(var(--dt-font-size) + 2px);
-    background-color: #90d2dd;
+    background-color: #eaeaea;
     border: 2px solid #000;
     text-align: center;
     padding: var(--dt-spacer-2);
@@ -826,7 +826,19 @@ widget.links-widget-box .link-item:first-child {
 .widget.dashboard-widget-box {
     border: 2px solid #d2e7fa;
 }
-
+.widget {
+    background-color: #ffffff;
+}
+.widget {
+    border-radius: 20px;
+}
+[data-page-route=Workspaces] .layout-main .layout-main-section-wrapper {
+    scrollbar-color: #d6e8f8 transparent;
+    scrollbar-width: unset;
+}
+[data-page-route=Workspaces] .layout-main .layout-main-section-wrapper {
+    scrollbar-color: #f3f3f3 transparent;
+    scrollbar-width: unset;
 }
 
 .dropdown-help {
@@ -912,15 +924,42 @@ widget.links-widget-box .link-item:first-child {
 }
   .widget .widget-head {
     display: flex;
-    border: .1px solid #17a2b8; /* Adding a border with the specified color */
-    border-radius: 5px; /* Optional: to make the border edges rounded */
-    padding: 5px; /* Optional: for spacing within the border */
+    padding: 5px; /* Retain spacing if needed */
+    position: relative; /* Ensure pseudo-elements align properly */
+    font-weight: bold; /* Optional: Emphasize the text */
 }
+
+.widget .widget-head::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Position the underline below the text */
+    width: 100%;
+    height: 3px; /* Thickness of the underline */
+    background: linear-gradient(90deg, #17a2b8, #99ccff); /* 3D gradient effect */
+    border-radius: 5px; /* Optional: Make the underline edges rounded */
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out; /* Add a smooth animation */
+}
+
+.widget .widget-head:hover::after {
+    transform: scaleX(1.1); /* Slightly enlarge the underline on hover */
+}
+
 .layout-side-section .icon, .layout-side-section .sidebar-label .icon {
     --icon-stroke: #17a2b8;
     stroke: #17a2b8 !important;
     fill: transparent;
     stroke-width: 2;
+}
+  img {
+    display: block; /* Makes the image block-level to allow centering */
+    margin: 0 auto; /* Centers the image horizontally */
+    vertical-align: middle; /* Aligns inline images to the middle */
+    border: 2px solid #8044e147; /* Adds a border with the specified color */
+    border-radius: 5px; /* Optional: Adds rounded corners to the border */
+}
 }
   img {
     display: block; /* Makes the image block-level to allow centering */
@@ -937,4 +976,5 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     max-height: 45px; /* Adjust height as needed */
     width: auto; /* Maintain aspect ratio */
 }
+
 
